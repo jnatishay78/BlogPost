@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Card UI Design</title>
+    
+    <link rel="stylesheet" href="assets/css/blog.css">
+
+    
+    
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profile_img">
+                    <img src="assets/img/favicon.png" style="width: 36px;" height="35px;" class="cover">
+                </div>
+                <h3>SQ Socials<br><span>Mumbai, India</span></h3> 
+            </div>
+            <div>
+               <img src="assets/img/dots.png" style="width:40px ;" class="dot">
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="assets/img/bg.png" class="cover">
+        </div>
+        <div class="actionBtns">
+            <div class="left">
+                <img src="assets/img/Heart.png" class="heart" onclick="likeButton()">
+                <img src="assets/img/comment.png" >
+                <img src="assets/img/Share.png" >
+            </div>
+            <div class="right">
+                <img src="assets/img/Bookmark.png" >
+            </div>    
+        </div>
+        <h4 class="likes">8,374 likes</h4>
+        <h4 class="message"><b>SQ Socials </b>Thanks for your love and support<span>#blogpost</span><span>#SchbangQ<span>#hackathon</span></span></h4>
+        <h4 class="comment">View all 830 comments</h4>
+        <div class="addComments">
+            <div class="userImg">
+                <img src="assets/img/bg1.jpg" style="width: 30px;">
+            </div>
+            <input type="text" class="text" placeholder="Add a comment.....">
+        </div>
+        <h5 class="postTime">4 hours ago</h5>
+    </div>
+
+    <script>
+        function likeButton(){
+            let heart = document.querySelector('.heart');
+            let likes = document.querySelector('.likes')
+            if(heart.src.match("Heart.png")){
+                heart.src = "assets/img/redheart.jpg";
+                likes.innerHTML = "8,375 likes";
+            }
+            else{
+                heart.src = "assets/img/Heart.png";
+                likes.innerHTML = "8,374 likes";
+            }
+        }
+    </script>
+</body>
+</html>
